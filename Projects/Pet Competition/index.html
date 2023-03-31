@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CS 2350
+      Project 3
+
+      Pet Competition Form
+      Author: Gabe Kidner
+      Date: 15-2-23  
+
+      Filename: index.html
+   -->
+   <meta charset="utf-8">
+   <title>Local Pet Competition</title>
+   <link href="styles/pc_styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="#">Utah's First Annual Pet Competition.</a></h1>
+        <p>This page is to register for Utah's annual pet competition make
+        sure to fill out the form to the best of your ablility.</p>
+        <p>Required values are marked by an asterisk (*)</p>
+    </header>
+    <div>
+        <form id="pet" action="http://icarus.cs.weber.edu/~linda/cs2350/submit_pet1.php" method="post">
+            <img src="images/pc_comp1.png" alt="" id="dog">
+            <img src="images/comp2.png" alt="" id="dogAndCat" usemap="#imgmap">
+            <map name="imgmap">
+                <area target="" alt="Dog" title="Dog" href="pc_dog.html" coords="40,7,147,107" shape="rect">
+                <area target="" alt="Cat" title="Cat" href="pc_cat.html" coords="167,62,226,127" shape="rect">
+            </map>
+            <fieldset id="petInfo">
+                <legend>Pet Information</legend>
+                <div>
+                    <label for="petname">Pet's Name</label>
+                    <input id="petname" type="text">
+                </div>
+                <div>
+                    <label for="petbirth">Pet's Birthday</label>
+                    <input id="petbirth" type="date">
+                </div>
+                <div>
+                    <label>Pet Type</label>
+                    <fieldset class="petType">
+                        <input name="petType" id="cat" value="cat" type="radio">
+                        <label for="cat">Cat</label>
+                        <input name="petType" id="dog" value="dog" type="radio">
+                        <label for="dog">Dog</label>
+                        <input name="petType" id="reptile" value="reptile" type="radio">
+                        <label for="reptile">Reptile</label>
+                        <input name="petType" id="bird" value="bird" type="radio">
+                        <label for="bird">Bird</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="petBio">Pet Bio <br>Enter a short biography of your pet.</label>
+                    <textarea name="pBio" id="petBio"></textarea>
+                </div>
+            </fieldset>
+            <fieldset id="conInfo">
+                <legend>Contact Information</legend>
+                <div>
+                    <label  for="name">Name*</label>
+                    <input id="name" type="text" placeholder="First and Last Name" required>
+                </div>
+                <div>
+                    <label for="number">Phone Number*</label>
+                    <input id="number" type="tel" placeholder="(nnn) nnn-nnnn" required
+                    pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
+                </div>
+                <div>
+                    <label for="email">E-mail*</label>
+                    <input id="email" type="email" required>
+                </div>
+            </fieldset>
+            <fieldset id="compInfo">
+                <legend>Competition Information</legend>
+                <div>
+                    <label>Which competition are you entering?</label>
+                    <input id="sing" type="checkbox">
+                    <label for="sing">Singing pet competition</label>
+                    <input id="cute" type="checkbox">
+                    <label for="cute">Cutest pet competition</label>
+                    <input id="tricks" type="checkbox">
+                    <label for="tricks">Pet tricks competition</label>
+                </div> 
+                <div>
+                    <label>What trick will you pet do?</label>
+                    <select name="tricksInfo" id="tricksInfo">
+                        <option value="obstcourse">obstacle course</option>
+                        <option value="catching">frisbee/ball/other catching</option>
+                        <option value="rollover">roll over/play dead</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset id="boardInfo">
+                <legend>Boarding Information</legend>
+                <label for="days">How many days will you be boarding?</label>
+                <input id="days" type="number" min="0" max="3">
+                <label for="inches">How big is your kennel in inches?</label>
+                <input id="inches" type="range" min="0" max="48" step="8">
+            </fieldset>
+            <input type="submit" value="Submit Your Information">
+            <input type="reset" value="Clear Your Form">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@charset "utf-8";
+/*
+   CS 2350 "My Personal Website"
+   
+   Images Stylesheet   
+
+   Date: 28-2-23
+   Filename: pw_base.css
+*/
+
+img#python{
+    padding-left: 10px;
+    -webkit-filter: grayscale();
+    filter: grayscale();
+}
+
+img#cpp{
+    padding-left: 10px;
+    -webkit-filter: grayscale();
+    filter: grayscale();
+}
+
+img#htm{
+    padding-left: 10px;
+    -webkit-filter: grayscale();
+    filter: grayscale();
+}
+
+img#hobby{
+    padding-left: 5%;
+    padding-right: auto;
+}
+
+img#book{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: skew(30deg);
+}
+
+img#chess{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img#tennis{
+    padding-top: 10%;
+    padding-left: 25%;
+    margin-right: auto;
+    transform: rotateZ(-45deg);
+}
+
+img#control{
+    padding-bottom: 10%;
+    padding-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotateZ(45deg);
+}
+
+img#computer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img#program{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Div Styles*/
+
+div{
+    padding-left: 30%;
+}
+
+div.column{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+div.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+footer#game{
+    margin-top: 30px;
+}

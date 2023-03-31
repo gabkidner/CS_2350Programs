@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+html{
+    background-color: gray;
+}
+
+header{
+    margin-left: 30%;
+    margin-right: 48%;
+    background-color: rgb(255, 66, 255);
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    margin-left: 15%;
+}
+
+table.schedule{
+    width: 80%;
+    border-collapse: collapse;
+    border: 20px inset rgb(255, 66, 255);
+}
+
+table.schedule tr{
+    height: 30px
+}
+
+table.schedule th, table.schedule td{
+    border: 2px dotted rgb(255, 66, 255);
+    vertical-align: top;
+    padding: 5px;
+}
+
+table.schedule thead{
+    background-color: rgb(67, 0, 67);
+    color: white;
+}
+
+table.schedule tbody{
+    background-color: rgb(255, 197, 255);
+}
+
+table.schedule caption{
+    caption-side: bottom;
+    text-align: center;
+    background-color: rgb(67, 0, 67);
+    color: white;
+}

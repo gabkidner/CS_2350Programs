@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*
+   CS 2350 "My Personal Website"
+   
+   Base Stylesheet   
+
+   Date: 28-2-23
+   Filename: pw_tables.css
+*/
+
+table{
+    font-family: 'Times New Roman', Times, serif;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-collapse: collapse;
+    border: solid 2px black;
+    background-color: white;
+}
+
+table th{
+    background-color: #d9d9d9;
+}
+
+table th#name{
+    font-size: 2em;
+    text-align: center;
+}
+
+table tr th{
+    text-align: left;
+    padding: 5px;
+    width: 50%;
+    border: solid 2px black;
+}
+
+table tbody td#number{
+    text-align: right;
+}
+
+table td{
+    border: solid 2px black;
+}
+
+table tr.lists td{
+
+    padding-left: 100px;
+    width: 50%;
+}

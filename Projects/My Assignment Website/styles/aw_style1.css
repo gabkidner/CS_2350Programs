@@ -1,0 +1,86 @@
+@charset "utf-8";
+@font-face {
+   font-family: Dance;
+   src: url(../fonts/DancingScript-VariableFont_wght.ttf);
+}
+@font-face{
+   font-family: Caveat;
+   src: url(../fonts/Caveat-VariableFont_wght.ttf);
+}
+/*
+   CS 2350
+   My Assignments website
+   
+   Website Style Sheet
+   Author: Gabe Kidner
+   Date: 19-1-23  
+   
+   Filename: aw_styles.css
+
+*/
+
+html{
+   background-color: #c09a9a;
+}
+
+header{
+   background-color: #c09a9a;
+   font-family: Dance, Verdana, Geneva, sans-serif;
+   padding-bottom: 20px;
+}
+
+h1{
+   font-family: Dance, Verdana, Geneva, sans-serif;
+   text-decoration: underline;
+   font-size: 2em;
+}
+
+nav > ul{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+nav > ul > li{
+   display: inline;
+}
+
+body{
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1020px;
+   min-width: 640px;
+   color: #313131;
+   background-color: #d9d9d9;
+   font-family: Caveat, Verdana, Geneva, sans-serif;
+   font-size: 1.4em;
+   text-align: center;
+}
+
+a:link,
+a:visited {
+   color: #000000;
+   text-decoration: none;
+}
+
+a:hover,
+a:active {
+   color: #cf9b9b;
+   text-decoration: underline;
+}
+
+dl>dt>a:hover,
+dl>dt>a:active {
+   color: #7c7c7c;
+}
+
+footer{
+   background-color: #c09a9a;
+   color: #000000;
+   font: normal small-caps 0.9em/3em Dance, Verdana, Geneva, sans-serif;
+   text-align: center;
+}
+
+img{
+   width: 100%;
+}

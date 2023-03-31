@@ -1,0 +1,131 @@
+@charset "utf-8";
+/*
+   CS 2350
+   Pet Competition Website
+   
+   Website Styles
+   Author: Gabe Kidner
+   Date: 16-2-23  
+   
+   Filename: pc_styles.css
+
+*/
+
+html{
+    background: url(../images/pc_head_back.png);
+}
+
+body {
+    perspective: 1000px;
+    box-shadow: inset black 5px 5px 25px;
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    text-align: center;
+    height: 200px;
+    background: url(../images/pc_head_back1.png);
+}
+
+
+h1 > a{
+    text-shadow: rgb(101, 173, 104) 1px 1px 0px,
+            rgba(41, 41, 41, 0.9) 5px 5px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+body{
+    background-color: #819C8B;
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+fieldset{
+    opacity: 60%;
+    border-radius: 10px;
+    background-color: #9ab9a5;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+legend{
+    opacity: 60%;
+    text-align: center;
+    background-color: rgb(188, 188, 188);
+    border: double #7b9283 5px;
+    border-radius: 100px;
+}
+
+input, textarea, select{
+    background-color: #d0f0db;
+}
+
+input[type="submit"] {
+    background: linear-gradient(#658972, #9ab9a5);
+    border-image: url(../images/pc_frame.png) 60 stretch;
+    height: 50px;
+    width: 200px;
+    margin-left: 250px;
+    margin-bottom: 10px;
+}
+
+input[type="reset"]{
+    background: radial-gradient(#9ab9a5,#42614d);
+    border-image: url(../images/pc_frame.png) 60 stretch;
+    height: 50px;
+    width: 200px;
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+input#number:focus:valid, input#name:focus:valid, input#email:focus:valid{
+   background: rgb(162, 252, 162) url(../images/pc_valid.png) right/contain no-repeat;
+}
+
+input#number:focus:invalid, input#name:focus:invalid, input#email:focus:invalid{
+   background: rgb(255, 230, 230) url(../images/pc_invalid.png) right/contain no-repeat;
+}
+
+img#dog{
+    transform: rotateZ(-10deg);
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+img#dogAndCat{
+    transform: skew(20deg);
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+img#Dog, img#cat{
+    margin-left: 40%;
+    margin-top: 5%;
+}

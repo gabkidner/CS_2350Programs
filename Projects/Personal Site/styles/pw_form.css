@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*
+   CS 2350 "My Personal Website"
+   
+   Images Stylesheet   
+
+   Date: 28-2-23
+   Filename: pw_base.css
+*/
+
+/*Form Styles*/
+
+form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+div{
+    padding-top: 40px;
+    padding-left: 10%;
+}
+
+footer{
+    margin-top: 30px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(#99a6e9, #29367A);
+    height: 50px;
+    width: 200px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+input[type="reset"]{
+    background: radial-gradient(#99a6e9,#29367A);
+    height: 50px;
+    width: 200px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Validate Styles*/
+
+input#phone:focus:valid, input#name:focus:valid, input#email:focus:valid{
+    background-color: rgb(162, 252, 162);
+ }
+
+ input#phone:focus:invalid, input#name:focus:invalid, input#email:focus:invalid{
+    background-color: rgb(255, 230, 230);
+ }

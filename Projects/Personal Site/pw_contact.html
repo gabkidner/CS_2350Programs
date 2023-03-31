@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!--
+         CS 2350 "My Personal Website"
+         Home Page/About Me
+   
+         Author: Gabe Kidner
+         Date: 28-2-23
+   
+         Filename: index.html
+     -->
+     <title>Contact Me</title>
+     <meta charset="utf-8">
+     <link href="styles/pw_base.css" rel="stylesheet">
+     <link href="styles/pw_form.css" rel="stylesheet">
+   </head>
+   <body>
+     <header>
+         <h2>Gabriel Kidner</h2>
+         <nav>
+             <ul>
+                 <li><a href="index.html">About Me</a></li>
+                 <li><a href="pw_resume.html">Resume</a></li>
+                 <li><a href="pw_aworks.html">Academic Works</a></li>
+                 <li><a href="pw_hobbies.html">My Hobbies</a></li>
+             </ul>
+         </nav>
+      </header>
+      <section>
+         <h1>Contact Me</h1>
+         <p>Thank you for viewing my website fill out the information bellow so I can contact you.
+         <br>required values are marked by an asterisk (*).</p>
+         <form id="user" action="http://icarus.cs.weber.edu/~linda/cs2350/submit_pet1.php" method="post">
+            <div>
+               <label for="name">Name*</label>
+               <input name="userName" id="name" type="text" placeholder="First and Last Name" required>
+            </div>
+            <div>
+               <label for="age">Age*</label>
+               <input name="userAge" id="age" type="number" value="1" min="1" max="99" required>
+            </div>
+            <div>
+               <label for="phone">Phone*</label>
+               <input name="userPhone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" required
+                        pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
+            </div>
+            <div>
+               <label for="email">Email</label>
+               <input name="userEmail" id="email" type="email" placeholder="example@gmail.com">
+            </div>
+            <div>
+               <label for="state">State*</label>
+               <select name="state">
+                  <option value="alabama">Alabama</option>
+                  <option value="alaska">Alaska</option>
+                  <option value="arizona">Arizona</option>
+                  <option value="arkansas">Arkansas</option>
+                  <option value="california">California</option>
+                  <option value="colorado">Colorado</option>
+                  <option value="connecticut">Connecticut</option>
+                  <option value="delaware">Delaware</option>
+                  <option value="florida">Florida</option>
+                  <option value="georgia">Georgia</option>
+                  <option value="hawaii">Hawaii</option>
+                  <option value="idaho">Idaho</option>
+                  <option value="illinois">Illinois</option>
+                  <option value="indiana">Indiana</option>
+                  <option value="iowa">Iowa</option>
+                  <option value="kansas">Kansas</option>
+                  <option value="kentucky">Kentucky</option>
+                  <option value="louisiana">Louisiana</option>
+                  <option value="maine">Maine</option>
+                  <option value="maryland">Maryland</option>
+                  <option value="massachusetts">Massachusetts</option>
+                  <option value="michigan">Michigan</option>
+                  <option value="minnesota">Minnesota</option>
+                  <option value="mississippi">Mississippi</option>
+                  <option value="missouri">Missouri</option>
+                  <option value="montana">Montana</option>
+                  <option value="nebraska">Nebraska</option>
+                  <option value="nevada">Nevada</option>
+                  <option value="new_hampshire">New Hampshire</option>
+                  <option value="new_jersey">New Jersey</option>
+                  <option value="new_mexico">New Mexico</option>
+                  <option value="new_york">New York</option>
+                  <option value="north_carolina">North Carolina</option>
+                  <option value="north_dakota">North Dakota</option>
+                  <option value="ohio">Ohio</option>
+                  <option value="oklahoma">Oklahoma</option>
+                  <option value="oregon">Oregon</option>
+                  <option value="pennsylvania">Pennsylvania</option>
+                  <option value="rhode_island">Rhode Island</option>
+                  <option value="south_carolina">South Carolina</option>
+                  <option value="south_dakota">South Dakota</option>
+                  <option value="tennessee">Tennessee</option>
+                  <option value="texas">Texas</option>
+                  <option value="utah">Utah</option>
+                  <option value="vermont">Vermont</option>
+                  <option value="virginia">Virginia</option>
+                  <option value="washington">Washington</option>
+                  <option value="west_virginia">West Virginia</option>
+                  <option value="wisconson">Wisconson</option>
+                  <option value="wyoming">Wyoming</option>
+               </select>
+            </div>
+            <div>
+               <input name="notify" value="yes" type="checkbox">
+               <label for="notify">Notify me when this website updates</label>
+            </div>
+            <input type="submit" value="Submit Your Information">
+            <input type="reset" value="Clear Your Information">
+         </form>
+      </section>
+   </body>
+   <footer>Gabriel Kidner &#x2022;  CS 2350 &#x2022; <a href="pw_contact.html">Contact Me</a></footer>
+</html>
