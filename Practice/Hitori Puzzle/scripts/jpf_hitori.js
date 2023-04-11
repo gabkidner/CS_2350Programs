@@ -89,26 +89,64 @@ function setupPuzzle(){
       allCells[i].style.color = "black";
       allCells[i].style.borderRadius = "0";
       allCells[i].addEventListener("mousedown",
-      function(e){
-         if(e.shiftKey){
+      function(){
+         var cellBackground
+         /*if(e.shiftKey){
             allCells[i].style.backgroundColor = "white";
             allCells[i].style.color = "black";
             allCells[i].style.borderRadius = "0";
-         }else if(e.altKey){
+         }
+         else if(e.altKey){
             allCells[i].style.backgroundColor = "black";
             allCells[i].style.color = "white";
             allCells[i].style.borderRadius = "0";
-         }else{
-            allCells[i].style.backgroundColor = "rgb(101, 101, 101)";
+         }
+         else{*/
+            allCells[i].style.backgroundColor = "red"//"rgb(101, 101, 101)"
             allCells[i].style.color = "white";
             allCells[i].style.borderRadius = "50%";
+         //}
+         //e.preventDefault();      
+      });
+      allCells[i].addEventListener("mouseover",
+      function(e){
+         if(e.shiftKey){
+            allCells[i].style.cursor = "url(images/jpf_eraser.png), alias";
+         }
+         else if(e.altKey){
+            allCells[i].style.cursor = "url(images/jpf_block.png), cell";
+         }
+         else{
+            allCells[i].style.cursor = "url(images/jpf_circle.png), pointer";
          }
       });
-      e.preventDefault();      
+      allCells[i].addEventListener("mouseup", checkSolution);
    }
 }
 
+function findErrors(){
+   var square = document.querySelectorAll("table#hitoriGrid td.blocks");
+   var circle = document.querySelectorAll("table#hitoriGrid td.circles");
 
+   for(var i = 0; i < square.length; i++){
+      if(square[i].style.backgroundColor == "rgb(101, 101, 101)"){
+         filled[i].style.color = "red";
+      }
+   }
+   for(var i = 0; i < circle.length; i++){
+      if(circle[i].style.backgroundColor == "black"){
+         filled[i].style.color = "red";
+      }
+   }
+   setTimeout(
+      function(){
+         for(var i = 0; i < allCells.length; i++){
+            if(allCells[i].style.color == "red"){
+               puzzleCells[i].style.color = "white";
+            }
+         }
+      }, 1000);
+}
 
 
          
@@ -134,7 +172,6 @@ function checkSolution() {
       }
    }
 
-   /* If solved is still true after the loop, display an alert box */
    if (solved) alert("Congratulations! You solved the puzzle!");
 }
 
@@ -184,6 +221,5 @@ function drawHitori(numbers, blocks, rating) {
    }
 
    htmlString += "</table>";
-
    return htmlString;
 }
