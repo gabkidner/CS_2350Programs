@@ -7,8 +7,8 @@
 
    Order Form Script
    
-   Author: 
-   Date:   
+   Author: Gabe Kidner
+   Date: 11-4-23  
    
    Filename: co_order.js
    
