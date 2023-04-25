@@ -9,8 +9,15 @@
     Filename: game.js
     */
    
+
+    var tableStyle = document.createElement("style");
+    document.head.appendChild(tableStyle);
+    document.styleSheets[document.styleSheets.length-1].insertRule("h1, h2, div#startForm{\
+        text-align: center;\
+    }", 0);
    var flipped = 0;
    var matches = 0;
+   var guesses = 0;
    var clickIDs = new Array;
    var clickValues = new Array;
    
@@ -88,7 +95,6 @@ function coverBoard(){
 }
 
 function flip(e){
-    var click;
     if(flipped < 2){
         var cardValue = e.target.getAttribute("value");
         if(flipped == 0){
@@ -98,14 +104,15 @@ function flip(e){
         else if(flipped == 1){
             clickValues.push(cardValue);
             clickIDs.push(e.target.getAttribute("id"));
-            console.log(clickIDs);
             if(clickIDs[0] == clickIDs[1]){
                 flipped--;
                 clickIDs.pop();
+                clickValues.pop();
             }
             else{
                 clickIDs.pop();
                 clickIDs.pop();
+                guesses++;
                 setTimeout(flipBack, 600);
             }
         }
@@ -139,4 +146,14 @@ function flipBack(){
     clickValues.pop();
     clickValues.pop();
     flipped = 0;
+    var allCards = document.getElementsByClassName("card");
+    var flipAmount = 0;
+    for(var i = 0; i < allCards.length; i++){
+        if(allCards[i].style.background == "white"){
+            flipAmount++;
+        }
+    }
+    if(flipAmount == allCards.length && matches == allCards.length/2){
+        document.getElementById("symbolCards").innerHTML = "<h2>Thanks For Playing</h2>";
+    }
 }
